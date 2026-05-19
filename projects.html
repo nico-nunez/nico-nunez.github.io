@@ -1,55 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Nico Nunez — Projects. Things I've built." />
   <title>projects — Nico Nunez</title>
   <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/components/Navbar.js"></script>
+  <script defer src="js/components/Footer.js"></script>
   <script src="js/main.js"></script>
 </head>
+
 <body>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- ═══ HEADER / NAV ═══ -->
+  <!-- --- HEADER / NAV --- -->
   <header class="site-header">
-    <nav class="nav-bar" aria-label="Primary navigation">
-      <a href="index.html" class="nav-brand" aria-label="Home">
-        <span class="nb-bracket">[</span><span class="nb-tilde">~/</span><span class="nb-path">nico-nunez</span><span class="nb-bracket">]</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="about.html">$ about</a></li>
-        <li><a href="projects.html">$ projects</a></li>
-        <li><a href="resume.html">$ resume</a></li>
-        <li>
-          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode">
-            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="none"
-                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none"
-                 stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
-              <circle cx="12" cy="12" r="4.5"/>
-              <line x1="12" y1="1.5"  x2="12" y2="4.5"/>
-              <line x1="12" y1="19.5" x2="12" y2="22.5"/>
-              <line x1="1.5"  y1="12" x2="4.5"  y2="12"/>
-              <line x1="19.5" y1="12" x2="22.5" y2="12"/>
-              <line x1="4.1"  y1="4.1"  x2="6.2"  y2="6.2"/>
-              <line x1="17.8" y1="17.8" x2="19.9" y2="19.9"/>
-              <line x1="19.9" y1="4.1"  x2="17.8" y2="6.2"/>
-              <line x1="6.2"  y1="17.8" x2="4.1"  y2="19.9"/>
-              <rect x="9"    y="11.2" width="2.6" height="1.8" rx="0.5" fill="currentColor" stroke="none"/>
-              <rect x="12.4" y="11.2" width="2.6" height="1.8" rx="0.5" fill="currentColor" stroke="none"/>
-              <line x1="11.6" y1="12.1" x2="12.4" y2="12.1" stroke-width="1.2"/>
-            </svg>
-          </button>
-        </li>
-      </ul>
-    </nav>
+    <web-navbar></web-navbar>
   </header>
 
-  <!-- ═══ MAIN ═══ -->
+  <!-- --- MAIN --- -->
   <main id="main-content">
 
     <nav aria-label="Breadcrumb" class="breadcrumb">
@@ -76,7 +48,9 @@
           <div class="card-body">
             <h2 class="card-name" id="proj-sequencer-name">Step Sequencer</h2>
             <p class="card-desc">
-              A browser-based drum machine with five genre-specific kits (rock, hip-hop, house, techno, drum &amp; bass). Built in React and TypeScript with audio samples hosted on S3. An earlier exploration of the same music and code intersection that eventually led to the groovebox.
+              A browser-based drum machine with five genre-specific kits (rock, hip-hop, house, techno, drum &amp;
+              bass). Built in React and TypeScript with audio samples hosted on S3. An earlier exploration of the same
+              music and code intersection that eventually led to the groovebox.
             </p>
             <ul class="tag-list" aria-label="Technologies used">
               <li class="tag">React</li>
@@ -84,8 +58,10 @@
               <li class="tag">AWS S3</li>
             </ul>
             <div class="card-links">
-              <a href="https://github.com/nico-nunez/step-sequencer" target="_blank" rel="noopener noreferrer">↗ repo</a>
-              <a href="https://nico-nunez.github.io/step-sequencer/" target="_blank" rel="noopener noreferrer">↗ live demo</a>
+              <a href="https://github.com/nico-nunez/step-sequencer" target="_blank" rel="noopener noreferrer">↗
+                repo</a>
+              <a href="https://nico-nunez.github.io/step-sequencer/" target="_blank" rel="noopener noreferrer">↗ live
+                demo</a>
             </div>
           </div>
         </article>
@@ -101,7 +77,13 @@
           <div class="card-body">
             <h2 class="card-name" id="proj-groovebox-name">meh-groovebox-visceral</h2>
             <p class="card-desc">
-              A code-driven performance instrument for macOS, built from scratch in C/C++. The synth engine is a separate extracted library running 64-voice polyphony with 4 wavetable oscillators per voice, a 16-slot modulation matrix with FM routing, configurable per-voice filter chains, and a full post-processing stack (chorus, phaser, delay, reverb). The groovebox host wraps it with a step sequencer with per-step parameter locks, multi-track mixing, and a Lua REPL with a built-in editor and language server for live configuration. No traditional GUI yet, though that's still on the table depending on how the Lua approach plays out.
+              A code-driven performance instrument for macOS, built from scratch in C/C++. The synth engine is a
+              separate extracted library running 64-voice polyphony with 4 wavetable oscillators per voice, a 16-slot
+              modulation matrix with FM routing, configurable per-voice filter chains, and a full post-processing stack
+              (chorus, phaser, delay, reverb). The groovebox host wraps it with a step sequencer with per-step parameter
+              locks, multi-track mixing, and a Lua REPL with a built-in editor and language server for live
+              configuration. No traditional GUI yet, though that's still on the table depending on how the Lua approach
+              plays out.
             </p>
             <ul class="tag-list" aria-label="Technologies used">
               <li class="tag">C/C++</li>
@@ -112,8 +94,10 @@
               <li class="tag">in progress</li>
             </ul>
             <div class="card-links">
-              <a href="https://github.com/nico-nunez/meh-groovebox-visceral" target="_blank" rel="noopener noreferrer">↗ groovebox repo</a>
-              <a href="https://github.com/nico-nunez/meh-synth-engine" target="_blank" rel="noopener noreferrer">↗ synth engine repo</a>
+              <a href="https://github.com/nico-nunez/meh-groovebox-visceral" target="_blank" rel="noopener noreferrer">↗
+                groovebox repo</a>
+              <a href="https://github.com/nico-nunez/meh-synth-engine" target="_blank" rel="noopener noreferrer">↗ synth
+                engine repo</a>
             </div>
           </div>
         </article>
@@ -129,7 +113,9 @@
           <div class="card-body">
             <h2 class="card-name" id="proj-slh-name">Santa's Lil' Helper</h2>
             <p class="card-desc">
-              A full-stack gift exchange organizer that coordinates Secret Santa for my family every year. React Router v7, TypeScript, PostgreSQL with Drizzle ORM, Vitest unit tests and Playwright end-to-end tests. Lives on AWS and runs November through December, deliberately spun down the rest of the year.
+              A full-stack gift exchange organizer that coordinates Secret Santa for my family every year. React Router
+              v7, TypeScript, PostgreSQL with Drizzle ORM, Vitest unit tests and Playwright end-to-end tests. Lives on
+              AWS and runs November through December, deliberately spun down the rest of the year.
             </p>
             <ul class="tag-list" aria-label="Technologies used">
               <li class="tag">TypeScript</li>
@@ -156,7 +142,9 @@
           <div class="card-body">
             <h2 class="card-name" id="proj-nvim-name">remind-meh.nvim</h2>
             <p class="card-desc">
-              A Neovim plugin for tracking TODO comments across a codebase. Scans with ripgrep, uses tree-sitter to validate that matches are actual comments rather than strings, and surfaces results in a floating window with jump-to navigation. Built for my own workflow.
+              A Neovim plugin for tracking TODO comments across a codebase. Scans with ripgrep, uses tree-sitter to
+              validate that matches are actual comments rather than strings, and surfaces results in a floating window
+              with jump-to navigation. Built for my own workflow.
             </p>
             <ul class="tag-list" aria-label="Technologies used">
               <li class="tag">Lua</li>
@@ -164,7 +152,8 @@
               <li class="tag">Neovim</li>
             </ul>
             <div class="card-links">
-              <a href="https://github.com/nico-nunez/remind-meh.nvim" target="_blank" rel="noopener noreferrer">↗ repo</a>
+              <a href="https://github.com/nico-nunez/remind-meh.nvim" target="_blank" rel="noopener noreferrer">↗
+                repo</a>
             </div>
           </div>
         </article>
@@ -174,17 +163,9 @@
 
   </main>
 
-  <!-- ═══ FOOTER ═══ -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <ul class="footer-links">
-        <li><a href="https://github.com/nico-nunez" target="_blank" rel="noopener noreferrer">github</a></li>
-        <li><a href="https://linkedin.com/in/nico-nunez" target="_blank" rel="noopener noreferrer">linkedin</a></li>
-        <li><a href="mailto:TODO_EMAIL">email</a></li>
-      </ul>
-      <p class="footer-copy">Nico Nunez &mdash; built with vanilla HTML/CSS/JS</p>
-    </div>
-  </footer>
+  <!-- --- FOOTER --- -->
+  <web-footer></web-footer>
 
 </body>
+
 </html>

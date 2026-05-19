@@ -1,24 +1,24 @@
 /* Apply saved theme before paint to avoid flash */
-(function () {
+(function() {
   const saved = localStorage.getItem('theme') || 'dark';
   document.documentElement.setAttribute('data-theme', saved);
 })();
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   const root = document.documentElement;
 
-  /* ── Theme toggle ── */
+  /* --- Theme toggle --- */
   const toggleBtn = document.getElementById('theme-toggle');
   if (toggleBtn) {
     function updateToggleLabel() {
       const isDark = root.getAttribute('data-theme') === 'dark';
       toggleBtn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-      toggleBtn.setAttribute('title',      isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      toggleBtn.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
     }
 
     updateToggleLabel();
 
-    toggleBtn.addEventListener('click', function () {
+    toggleBtn.addEventListener('click', function() {
       const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* ── Active nav link ── */
+  /* --- Active nav link --- */
   const page = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach(function (link) {
+  document.querySelectorAll('.nav-links a').forEach(function(link) {
     const href = link.getAttribute('href');
     if (href === page || (page === '' && href === 'index.html')) {
       link.classList.add('active');
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  /* ── Typing animation (home page only) ── */
+  /* --- Typing animation (home page only) --- */
   const typedEl = document.getElementById('typed-tagline');
   if (!typedEl) return;
 
@@ -44,13 +44,12 @@ document.addEventListener('DOMContentLoaded', function () {
     'software engineer',
     'problem solver',
     'builder of things',
-    'open to work',   /* TODO: remove when no longer job hunting */
   ];
 
   let phraseIdx = 0;
-  let charIdx   = 0;
-  let deleting  = false;
-  let hold      = false;
+  let charIdx = 0;
+  let deleting = false;
+  let hold = false;
 
   function tick() {
     if (hold) return;
@@ -60,16 +59,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!deleting) {
       typedEl.textContent = current.slice(0, charIdx + 1);
       charIdx++;
-      if (charIdx === current.length) {
+      if (charIdx >= current.length) {
         hold = true;
-        setTimeout(function () { hold = false; deleting = true; tick(); }, 2400);
+        setTimeout(function() { hold = false; deleting = true; tick(); }, 2400);
         return;
       }
     } else {
       typedEl.textContent = current.slice(0, charIdx - 1);
       charIdx--;
-      if (charIdx === 0) {
-        deleting  = false;
+      if (charIdx <= 0) {
+        deleting = false;
         phraseIdx = (phraseIdx + 1) % phrases.length;
       }
     }

@@ -1,84 +1,73 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Nico Nunez — Software Engineer. Personal site and portfolio." />
   <title>Nico Nunez — dev</title>
   <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/components/Navbar.js"></script>
+  <script defer src="js/components/Footer.js"></script>
   <script src="js/main.js"></script>
 </head>
+
 <body>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- ═══ HEADER / NAV ═══ -->
+  <!-- --- HEADER / NAV --- -->
   <header class="site-header">
-    <nav class="nav-bar" aria-label="Primary navigation">
-      <a href="index.html" class="nav-brand" aria-label="Home">
-        <span class="nb-bracket">[</span><span class="nb-tilde">~/</span><span class="nb-path">nico-nunez</span><span class="nb-bracket">]</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="about.html">$ about</a></li>
-        <li><a href="projects.html">$ projects</a></li>
-        <li><a href="resume.html">$ resume</a></li>
-        <li>
-          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode">
-            <!-- Moon icon (shown in dark mode) -->
-            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="none"
-                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-            <!-- Spiky sun with sunglasses (shown in light mode) -->
-            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none"
-                 stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
-              <circle cx="12" cy="12" r="4.5"/>
-              <line x1="12" y1="1.5"  x2="12" y2="4.5"/>
-              <line x1="12" y1="19.5" x2="12" y2="22.5"/>
-              <line x1="1.5"  y1="12" x2="4.5"  y2="12"/>
-              <line x1="19.5" y1="12" x2="22.5" y2="12"/>
-              <line x1="4.1"  y1="4.1"  x2="6.2"  y2="6.2"/>
-              <line x1="17.8" y1="17.8" x2="19.9" y2="19.9"/>
-              <line x1="19.9" y1="4.1"  x2="17.8" y2="6.2"/>
-              <line x1="6.2"  y1="17.8" x2="4.1"  y2="19.9"/>
-              <!-- sunglasses -->
-              <rect x="9"    y="11.2" width="2.6" height="1.8" rx="0.5" fill="currentColor" stroke="none"/>
-              <rect x="12.4" y="11.2" width="2.6" height="1.8" rx="0.5" fill="currentColor" stroke="none"/>
-              <line x1="11.6" y1="12.1" x2="12.4" y2="12.1" stroke-width="1.2"/>
-            </svg>
-          </button>
-        </li>
-      </ul>
-    </nav>
+      <web-navbar></web-navbar>
   </header>
 
-  <!-- ═══ MAIN ═══ -->
+  <!-- --- MAIN --- -->
   <main id="main-content">
     <section class="hero" aria-label="Introduction">
 
-      <!-- Boot sequence flavour text -->
-      <div class="hero-boot" aria-hidden="true">
-        <span class="boot-line boot-dim">$ ssh nico-nunez@personal-site</span>
-        <span class="boot-line">Connected. Welcome back.</span>
-        <span class="boot-line boot-ok">[ OK ] Profile loaded.</span>
+      <div class="neofetch" aria-hidden="true">
+        <div class="nf-cmd">$ neofetch</div>
+        <div class="nf-body">
+          <pre class="nf-logo">
+            -+shdmNNNNmdhs+-
+        .+hMNho/:..``..:/ohNMh+.
+      :hMdo.                .odMh:
+    -dMy-                      -yMd-
+   sMd-                          -dMs
+  hMy       +.            .+       yMh
+ yMy        sm-.         -ms        yMy
+:Mm`        dMNMs.       :Md        `mM:
+yM+         dM:Nms`      :Md         +My
+mM-         dM:  +NN+    :Md         -Mm
+mM-         dM:   `+NN+  :Md         -Mm
+yM+         dM:     `sNm.:Md         +My
+:Mm`        dM:       `sMNMd        `mM:
+ yMy        sm-          -ms        yMy
+  hMy       +.            .+       yMh
+   sMd-                          -dMs
+    -dMy-                      -yMd-
+      :hMdo.                .odMh:
+        .+hMNho/:..``..:/ohNMh+.
+            -+shdmNNNmdhs+-
+          </pre>
+          <div class="nf-info">
+            <div class="nf-header">
+              <span class="nf-user">nico-nunez</span><span class="nf-at">@</span><span
+                class="nf-host">personal-site</span>
+            </div>
+            <div class="nf-sep">─────────────────────────</div>
+            <div class="nf-row"><span class="nf-key">role</span><span class="nf-val">Software Engineer</span></div>
+            <div class="nf-row"><span class="nf-key">location</span><span class="nf-val">Chicagoland, IL</span></div>
+            <div class="nf-row"><span class="nf-key">focus</span><span class="nf-val">web → systems</span></div>
+            <div class="nf-row"><span class="nf-key">languages</span><span class="nf-val">JS · TS · C · C++</span>
+            </div>
+            <div class="nf-row"><span class="nf-key">shell</span><span class="nf-val">zsh</span></div>
+            <div class="nf-row"><span class="nf-key">status</span><span class="nf-val nf-ok">● open to work</span></div>
+          </div>
+        </div>
       </div>
 
-      <pre class="ascii-art" aria-hidden="true">
- ██████╗ ██╗     ██╗     ███████╗██╗  ██╗
-██╔═══██╗██║     ██║     ██╔════╝██║  ██║
-██║   ██║██║     ██║     █████╗  ███████║
-██║   ██║██║     ██║     ██╔══╝  ██╔══██║
-╚██████╔╝███████╗███████╗███████╗██║  ██║
- ╚═════╝ ╚══════╝╚══════╝╚══════╝╚═╝  ╚═╝
-
-██████╗ ██╗     ██████╗  ██████╗ ██╗    ██╗
-██╔══██╗██║     ██╔══██╗██╔═══██╗██║    ██║
-██║  ██║██║     ██████╔╝██║   ██║██║ █╗ ██║
-██║  ██║██║     ██╔══██╗██║   ██║██║███╗██║
-██████╔╝███████╗██║  ██║╚██████╔╝╚███╔███╔╝
-╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝  ╚══╝╚══╝</pre>
-
-      <span class="visually-hidden">Hello World — Nico Nunez's personal site</span>
+      <span class="visually-hidden">Nico Nunez's personal site</span>
 
       <div class="tagline-line" aria-live="polite" aria-atomic="true">
         <span class="prompt-char" aria-hidden="true">&gt;</span>
@@ -89,7 +78,8 @@
     </section>
 
     <p class="hero-intro">
-      Software engineer in the Chicagoland area. I came up through frontend but my real interest is in what happens closer to the metal. Open to what's next.
+      Software engineer in the Chicagoland area. I came up through (frontend) web development but my real interest is in what happens
+      closer to the metal. Open to what's next.
     </p>
 
     <!-- Quick nav -->
@@ -117,17 +107,9 @@
 
   </main>
 
-  <!-- ═══ FOOTER ═══ -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <ul class="footer-links">
-        <li><a href="https://github.com/nico-nunez" target="_blank" rel="noopener noreferrer">github</a></li>
-        <li><a href="https://linkedin.com/in/nico-nunez" target="_blank" rel="noopener noreferrer">linkedin</a></li>
-        <li><a href="mailto:TODO_EMAIL">email</a></li>
-      </ul>
-      <p class="footer-copy">Nico Nunez &mdash; built with vanilla HTML/CSS/JS</p>
-    </div>
-  </footer>
+  <!-- --- FOOTER --- -->
+  <web-footer></web-footer>
 
-</body>
+  </body>
+
 </html>

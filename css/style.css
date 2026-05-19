@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
 
-/* ─────────────────────────────────────────
+/* =========================================
    THEME VARIABLES
-───────────────────────────────────────── */
+========================================= */
 :root,
 [data-theme="dark"] {
   --bg:             #0d1117;
@@ -40,9 +40,9 @@
   --shadow:         0 4px 32px rgba(0, 0, 0, 0.4);
 }
 
-/* ─────────────────────────────────────────
+/* =========================================
    RESET & BASE
-───────────────────────────────────────── */
+========================================= */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -70,9 +70,9 @@ body {
   color: var(--text-bright);
 }
 
-/* ─────────────────────────────────────────
+/* =========================================
    ACCESSIBILITY
-───────────────────────────────────────── */
+========================================= */
 .skip-link {
   position: absolute;
   top: -100%;
@@ -105,15 +105,16 @@ body {
   outline-offset: 3px;
 }
 
-/* ─────────────────────────────────────────
+/* =========================================
    HEADER / NAV
-───────────────────────────────────────── */
+========================================= */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 200;
   background: var(--surface);
   border-bottom: 1px solid var(--border);
+  min-height: 3.25rem; /* reserve for nav web component */
 }
 
 .nav-bar {
@@ -168,9 +169,9 @@ body {
   border-color: var(--border-bright);
 }
 
-/* ─────────────────────────────────────────
+/* =========================================
    THEME TOGGLE
-───────────────────────────────────────── */
+========================================= */
 .theme-toggle {
   background: none;
   border: 1px solid var(--border);
@@ -201,9 +202,9 @@ body {
 [data-theme="dark"]  .icon-moon { display: block; }
 [data-theme="light"] .icon-sun  { display: block; }
 
-/* ─────────────────────────────────────────
+/* =========================================
    MAIN
-───────────────────────────────────────── */
+========================================= */
 main {
   flex: 1;
   max-width: 1100px;
@@ -212,9 +213,9 @@ main {
   padding: 3rem 1.5rem 4rem;
 }
 
-/* ─────────────────────────────────────────
+/* =========================================
    BREADCRUMB
-───────────────────────────────────────── */
+========================================= */
 .breadcrumb {
   font-size: 0.78rem;
   color: var(--text-dim);
@@ -226,9 +227,9 @@ main {
 .breadcrumb .sep     { margin: 0 0.35rem; color: var(--border-bright); }
 .breadcrumb .current { color: var(--text-bright); }
 
-/* ─────────────────────────────────────────
+/* =========================================
    PANELS
-───────────────────────────────────────── */
+========================================= */
 .panel {
   position: relative;
   border: 1px solid var(--border);
@@ -252,63 +253,91 @@ main {
 .panel-title::before { content: "─[ "; color: var(--border-bright); }
 .panel-title::after  { content: " ]─"; color: var(--border-bright); }
 
-/* ─────────────────────────────────────────
+/* =========================================
    HOME — HERO
-───────────────────────────────────────── */
+========================================= */
 .hero {
   padding: 2.5rem 0 1rem;
   text-align: center;
 }
 
-.hero-boot {
-  font-size: 0.78rem;
-  color: var(--text-dim);
-  margin-bottom: 2rem;
-  text-align: left;
-  display: inline-block;
+/* =========================================
+   CRT PAGE OVERLAY
+========================================= */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.04) 2px,
+      rgba(0, 0, 0, 0.04) 4px
+    ),
+    radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.35) 100%);
+  pointer-events: none;
+  z-index: 9998;
 }
 
-.hero-boot .boot-line { display: block; }
-.hero-boot .boot-ok   { color: var(--green); }
-.hero-boot .boot-dim  { color: var(--text-dim); }
-
-.ascii-art {
-  font-size: clamp(0.32rem, 1.1vw, 0.68rem);
-  line-height: 1.15;
-  color: var(--accent);
-  overflow-x: auto;
+.neofetch {
   display: inline-block;
   text-align: left;
-  max-width: 100%;
-  margin: 0 auto;
-  margin-bottom: 0;
-  user-select: none;
-}
-
-.ascii-hero {
-  display: inline-block;
-  text-align: left;
-}
-
-.ascii-error {
   font-size: 0.82rem;
-  color: var(--text);
-  opacity: 0.55;
-  margin-top: 0.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.7;
 }
 
-.ascii-error-prefix {
-  color: var(--red);
+.nf-cmd {
+  color: var(--text-dim);
+  margin-bottom: 0.75rem;
 }
 
-.hero-name {
-  margin-top: 1.5rem;
-  font-size: clamp(1.4rem, 4vw, 2.5rem);
-  font-weight: 700;
-  color: var(--text-bright);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+.nf-body {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
+
+.nf-logo {
+  color: var(--accent);
+  font-size: 0.6rem;
+  line-height: 1.25;
+  flex-shrink: 0;
+  margin: 0;
+  padding-right: 1.25rem;
+}
+
+.nf-header { font-weight: 600; }
+
+.nf-user { color: var(--accent); }
+.nf-at   { color: var(--text-dim); margin: 0 0.1rem; }
+.nf-host { color: var(--text-bright); }
+
+.nf-sep {
+  color: var(--border-bright);
+  margin-bottom: 0.25rem;
+}
+
+.nf-row {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.nf-key {
+  color: var(--accent);
+  min-width: 6.5rem;
+  text-align: right;
+}
+
+.nf-key::after {
+  content: ' :';
+  color: var(--text-dim);
+}
+
+.nf-val { color: var(--text); }
+.nf-ok  { color: var(--green); }
 
 .tagline-line {
   margin-top: 1rem;
@@ -337,9 +366,9 @@ main {
   50%       { opacity: 0; }
 }
 
-/* ─────────────────────────────────────────
+/* =========================================
    HOME — NAV CARDS
-───────────────────────────────────────── */
+========================================= */
 .home-nav {
   margin-top: 3rem;
 }
@@ -388,9 +417,9 @@ main {
 
 .home-status .status-ok { color: var(--green); }
 
-/* ─────────────────────────────────────────
+/* =========================================
    ABOUT PAGE
-───────────────────────────────────────── */
+========================================= */
 .about-grid {
   display: grid;
   grid-template-columns: 3fr 2fr;
@@ -441,9 +470,9 @@ main {
   flex-shrink: 0;
 }
 
-/* ─────────────────────────────────────────
+/* =========================================
    PROJECTS PAGE
-───────────────────────────────────────── */
+========================================= */
 .projects-intro {
   font-size: 0.88rem;
   color: var(--text-dim);
@@ -561,9 +590,9 @@ main {
 
 .card-links a:hover { text-decoration: underline; }
 
-/* ─────────────────────────────────────────
+/* =========================================
    RESUME PAGE
-───────────────────────────────────────── */
+========================================= */
 .resume-actions {
   display: flex;
   gap: 0.75rem;
@@ -620,9 +649,9 @@ main {
 
 .resume-fallback a { color: var(--accent); }
 
-/* ─────────────────────────────────────────
+/* =========================================
    FOOTER
-───────────────────────────────────────── */
+========================================= */
 .site-footer {
   position: sticky;
   bottom: 0;
@@ -662,23 +691,23 @@ main {
   color: var(--text-dim);
 }
 
-/* ─────────────────────────────────────────
+/* =========================================
    LINKS (global)
-───────────────────────────────────────── */
+========================================= */
 a { color: var(--accent); }
 a:hover { text-decoration: underline; }
 
-/* ─────────────────────────────────────────
+/* =========================================
    SCROLLBAR
-───────────────────────────────────────── */
+========================================= */
 ::-webkit-scrollbar       { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border-bright); }
 ::-webkit-scrollbar-thumb:hover { background: var(--text-dim); }
 
-/* ─────────────────────────────────────────
+/* =========================================
    RESPONSIVE
-───────────────────────────────────────── */
+========================================= */
 @media (max-width: 720px) {
   .about-grid         { grid-template-columns: 1fr; }
   .projects-grid      { grid-template-columns: 1fr; }
@@ -693,6 +722,6 @@ a:hover { text-decoration: underline; }
 @media (max-width: 480px) {
   .nav-brand              { display: none; }
   .nav-links a            { padding: 0.25rem 0.45rem; font-size: 0.78rem; }
-  .ascii-art              { display: none; }
+  .monitor-body           { width: 100%; }
   .footer-inner           { flex-direction: column; text-align: center; }
 }
