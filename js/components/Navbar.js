@@ -10,7 +10,7 @@ class Navbar extends HTMLElement {
       <ul class="nav-links">
         <li><a href="about.html">$ about</a></li>
         <li><a href="projects.html">$ projects</a></li>
-        <li><a href="resume.html">$ resume</a></li>
+        <li><a href="resume.html">$ resumes</a></li>
         <li>
           <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode"
             title="Switch to light mode">
