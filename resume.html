@@ -2,428 +2,375 @@
 <html lang="en" data-theme="dark">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Nico Nunez — Resume. View or download my resume." />
-  <title>resumes — Nico Nunez</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <script defer src="js/components/Navbar.js"></script>
-  <script defer src="js/components/Footer.js"></script>
-  <script src="js/main.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nico Nunez — Resume. View or download my resume." />
+    <title>resumes — Nico Nunez</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script defer src="js/components/Navbar.js"></script>
+    <script defer src="js/components/Footer.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
 
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <header class="site-header">
-    <web-navbar></web-navbar>
-  </header>
+    <header class="site-header">
+        <web-navbar></web-navbar>
+    </header>
 
-  <main id="main-content">
+    <main id="main-content">
 
-    <nav aria-label="Breadcrumb" class="breadcrumb">
-      <a href="index.html">~</a>
-      <span class="sep" aria-hidden="true">/</span>
-      <span class="current" aria-current="page">resumes</span>
-    </nav>
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+            <a href="index.html">~</a>
+            <span class="sep" aria-hidden="true">/</span>
+            <span class="current" aria-current="page">resumes</span>
+        </nav>
 
-    <div class="resume-page-header">
-      <div class="resume-tabs" role="tablist" aria-label="Resume version">
-        <button class="resume-tab active" role="tab" aria-selected="true"
-          aria-controls="tab-fullstack" id="btn-fullstack" data-tab="fullstack">
-          Fullstack Engineer
-        </button>
-        <button class="resume-tab" role="tab" aria-selected="false"
-          aria-controls="tab-systems" id="btn-systems" data-tab="systems">
-          Systems / C++
-        </button>
-      </div>
-      <a id="resume-download"
-         href="assets/resumes/Nick%20Nunez%20-%20Software%20Engineer%20(full%20stack).pdf"
-         download="Nick_Nunez_Resume_Fullstack.pdf"
-         class="btn">
-        ↓ download PDF
-      </a>
-    </div>
-
-    <div class="resume-doc-wrapper">
-
-      <!-- ── Fullstack resume ── -->
-      <div id="tab-fullstack" class="resume-doc" role="tabpanel" aria-labelledby="btn-fullstack">
-        <div class="container">
-          <header>
-            <h1>Nick Nunez</h1>
-            <div class="contact-info">
-              <span>Villa Park, IL</span>
-              <span>•</span>
-              <span><a href="mailto:nick.nunez.dev@gmail.com">nick.nunez.dev@gmail.com</a></span>
-              <span>•</span>
-              <span>630-649-0649</span>
-              <span>•</span>
-              <span><a href="https://nico-nunez.github.io" target="_blank">nico-nunez.github.io</a></span>
+        <div class="resume-page-header">
+            <div class="resume-tabs" role="tablist" aria-label="Resume version">
+                <button class="resume-tab active" role="tab" aria-selected="true" aria-controls="tab-fullstack"
+                    id="btn-fullstack" data-tab="fullstack">
+                    Fullstack
+                </button>
+                <button class="resume-tab" role="tab" aria-selected="false" aria-controls="tab-systems" id="btn-systems"
+                    data-tab="systems">
+                    Systems / C++
+                </button>
             </div>
-          </header>
-
-          <section>
-            <h2>Summary</h2>
-            <p class="resume-summary">
-              Self-taught software engineer with 3 years of professional experience delivering enterprise-scale web
-              applications at a global media agency, advancing from individual contributor to technical lead. Work across
-              the full stack — contributed Django/Python APIs and data pipeline design professionally, and have built
-              fullstack applications end-to-end independently using React Router v7, PostgreSQL, and TypeScript. Bring
-              a strong sense of ownership, an eye for API design, and a track record of raising technical quality in
-              the codebases I work in.
-            </p>
-          </section>
-
-          <section>
-            <h2>Experience</h2>
-
-            <div class="job">
-              <div class="job-header">
-                <h3><span class="job-title">Software Engineer</span> <span class="job-company">| Publicis Media</span></h3>
-                <span class="job-date">September 2022 – November 2025</span>
-              </div>
-
-              <div class="subsection">
-                <h4>Technical Leadership (2024–2025)</h4>
-                <ul>
-                  <li>Led frontend development across 3+ concurrent enterprise applications serving internal teams and
-                    external clients; owned hiring of junior and mid-level developers, conducted code reviews, mentored
-                    new hires, and established development best practices</li>
-                  <li>Architected reusable component libraries and design patterns shared across multiple applications,
-                    reducing duplication and enabling faster feature delivery</li>
-                </ul>
-              </div>
-
-              <div class="subsection">
-                <h4>Backend &amp; API Development</h4>
-                <ul>
-                  <li>Contributed Django/Python API development for internal data pipelines — built CRUD endpoints,
-                    designed request/response contracts, and collaborated directly with the data engineering team on
-                    integration</li>
-                  <li>Identified and diagnosed API and architectural issues across Django backend services, defining
-                    solutions and surfacing them through the team's implementation pipeline</li>
-                  <li>Reverse-engineered undocumented Java/Spring Boot APIs from source code to unblock frontend
-                    integration when working with an offshore team across timezone constraints</li>
-                  <li>Identified and led the replacement of insecure API access patterns with JWT authentication on a
-                    campaign management platform</li>
-                </ul>
-              </div>
-
-              <div class="subsection">
-                <h4>Frontend &amp; Data Platform Development</h4>
-                <ul>
-                  <li>Built data analytics platform processing 10–50K records per session from AWS S3 with real-time
-                    client-side filtering, aggregation, and 50+ custom dashboard pages using React and TypeScript</li>
-                  <li>Optimized platform performance with parallel API requests, client-side caching, and efficient
-                    state management (Jotai, Zustand, Tanstack Query); wrote comprehensive test coverage with
-                    Vitest and React Testing Library</li>
-                  <li>Developed React UI from scratch for a Java/Spring Boot SERP analytics application — built custom
-                    form component library, reporting system with 8 report types and 12+ filter combinations, and
-                    user management interfaces</li>
-                  <li>Led complete Angular-to-React migration for advertising campaign platform across 16–20 pages;
-                    integrated multiple data sources into unified dashboards with complex chart and visualization
-                    components</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="job">
-              <div class="job-header">
-                <h3><span class="job-title">Lawn Care Technician</span> <span class="job-company">| TruGreen</span></h3>
-                <span class="job-date">2013 – 2021</span>
-              </div>
-              <ul>
-                <li>Advanced from residential to commercial accounts over 8 years; transitioned into software
-                  engineering through self-directed study</li>
-              </ul>
-            </div>
-          </section>
-
-          <section>
-            <h2>Projects</h2>
-
-            <div class="resume-project">
-              <div class="job-header">
-                <h4>Santa's Lil' Helper v2</h4>
-                <span class="job-date"><a href="https://github.com/nico-nunez/slh-v2" target="_blank">github.com/nico-nunez/slh-v2</a></span>
-              </div>
-              <ul>
-                <li>Full-stack gift exchange platform built with React Router v7 (SSR-capable, file-based routing),
-                  PostgreSQL, and end-to-end TypeScript — sole owner from schema design to production deployment</li>
-                <li>Architected layered backend with service/repository separation; Zod validation schemas shared
-                  across frontend and backend for end-to-end type safety</li>
-                <li>Dual-environment database setup: local Docker PostgreSQL for development, Neon serverless for
-                  production; managed schema evolution via Drizzle ORM migrations</li>
-                <li>Deployed to AWS EC2 with scripted deployment workflow; E2E test coverage via Playwright,
-                  unit tests via Vitest</li>
-              </ul>
-              <div class="resume-technologies">React Router v7, TypeScript, PostgreSQL, Drizzle ORM, Zod, Tailwind CSS,
-                shadcn/ui, Playwright, Vitest, AWS EC2, Docker</div>
-            </div>
-
-            <div class="resume-project">
-              <div class="job-header">
-                <h4>Personal Website</h4>
-                <span class="job-date">In progress</span>
-              </div>
-              <ul>
-                <li>Portfolio site built with vanilla web components and no framework — deliberate choice to work
-                  closer to the platform and demonstrate range beyond React</li>
-              </ul>
-            </div>
-          </section>
-
-          <section>
-            <h2>Technical Skills</h2>
-            <div class="resume-skills-grid">
-              <div class="resume-skill-item">
-                <span class="resume-skill-label">Frontend:</span>
-                <span class="resume-skill-value">React, TypeScript, JavaScript, HTML, CSS, Tailwind</span>
-              </div>
-              <div class="resume-skill-item">
-                <span class="resume-skill-label">Backend:</span>
-                <span class="resume-skill-value">Node.js, Python, Django, REST API design</span>
-              </div>
-              <div class="resume-skill-item">
-                <span class="resume-skill-label">Database:</span>
-                <span class="resume-skill-value">PostgreSQL, Drizzle ORM, SQL, data modeling</span>
-              </div>
-              <div class="resume-skill-item">
-                <span class="resume-skill-label">Testing:</span>
-                <span class="resume-skill-value">Vitest, Playwright, React Testing Library</span>
-              </div>
-              <div class="resume-skill-item">
-                <span class="resume-skill-label">State Management:</span>
-                <span class="resume-skill-value">Redux, Zustand, Jotai, Tanstack Query</span>
-              </div>
-              <div class="resume-skill-item">
-                <span class="resume-skill-label">Cloud &amp; Infra:</span>
-                <span class="resume-skill-value">AWS (EC2, S3), GCP, Docker, Docker Compose</span>
-              </div>
-              <div class="resume-skill-item">
-                <span class="resume-skill-label">Build &amp; Tools:</span>
-                <span class="resume-skill-value">Vite, Git, Jenkins, ESLint</span>
-              </div>
-              <div class="resume-skill-item">
-                <span class="resume-skill-label">Auth &amp; Security:</span>
-                <span class="resume-skill-value">JWT, session management, secure API patterns</span>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <h2>Education</h2>
-            <div class="resume-education">
-              <strong>High School Diploma</strong>
-            </div>
-          </section>
+            <a id="resume-download" href="assets/resumes/nick_nunez_fullstack_resume.pdf"
+                download="Nick_Nunez_Resume_Fullstack.pdf" class="btn">
+                ↓ download PDF
+            </a>
         </div>
-      </div>
 
-      <!-- ── Systems resume ── -->
-      <div id="tab-systems" class="resume-doc" role="tabpanel" aria-labelledby="btn-systems" hidden>
-        <div class="container">
-          <header>
-            <h1>Nick Nunez</h1>
-            <div class="contact-info">
-              <span>Villa Park, IL</span>
-              <span>•</span>
-              <span><a href="mailto:nick.nunez.dev@gmail.com">nick.nunez.dev@gmail.com</a></span>
-              <span>•</span>
-              <span>630-649-0649</span>
-              <span>•</span>
-              <span><a href="https://nico-nunez.github.io" target="_blank">nico-nunez.github.io</a></span>
+        <div class="resume-doc-wrapper">
+
+            <!-- ── Fullstack resume ── -->
+            <div id="tab-fullstack" class="resume-doc" role="tabpanel" aria-labelledby="btn-fullstack">
+                <div class="container">
+                    <header>
+                        <h1>Nick Nunez</h1>
+                        <div class="contact-info">
+                            <span>Villa Park, IL</span>
+                            <span>•</span>
+                            <span><a href="mailto:nick.nunez.dev@gmail.com">nick.nunez.dev@gmail.com</a></span>
+                            <span>•</span>
+                            <span>630-649-0649</span>
+                            <span>•</span>
+                            <span><a href="https://nico-nunez.github.io" target="_blank">nico-nunez.github.io</a></span>
+                        </div>
+                    </header>
+
+                    <section>
+                        <h2>Summary</h2>
+                        <p class="resume-summary">
+                            React/TypeScript software engineer with 3 years of experience building enterprise web
+                            applications at Publicis Media and full-stack ownership on independent projects. Led
+                            frontend architecture across multiple internal tools, collaborated with Java and
+                            Django/Python backend systems, and independently built full-stack applications with Node,
+                            PostgreSQL, and TypeScript.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Experience</h2>
+
+                        <div class="job">
+                            <div class="job-header">
+                                <h3><span class="job-title">React Developer / Software Engineer</span> <span
+                                        class="job-company">|
+                                        Publicis Media</span></h3>
+                                <span class="job-date">September 2022 – November 2025</span>
+                            </div>
+
+                            <ul>
+                                <li>Led frontend development across multiple enterprise applications for internal teams
+                                    and external clients, growing from sole frontend developer into a technical
+                                    leadership role.</li>
+                                <li>Mentored junior and mid-level developers through hiring, onboarding, code review,
+                                    and day-to-day technical guidance.</li>
+                                <li>Established shared React component patterns and frontend architecture used across
+                                    multiple applications, reducing duplication and improving delivery consistency.</li>
+                                <li>Built data-heavy React/TypeScript applications for analytics and campaign
+                                    management workflows, including dashboards handling 10–50K records per session.</li>
+                                <li>Migrated legacy Angular and Java/Spring Boot application interfaces to React,
+                                    modernizing reporting, filtering, and user management workflows.</li>
+                                <li>Collaborated with Java/Spring Boot and Django/Python backend systems by designing
+                                    API contracts, integrating data pipelines, and diagnosing cross-service issues.</li>
+                            </ul>
+                        </div>
+
+                        <div class="job">
+                            <div class="job-header">
+                                <h3><span class="job-title">Lawn Care Technician</span> <span class="job-company">|
+                                        TruGreen</span></h3>
+                                <span class="job-date">2013 – 2021</span>
+                            </div>
+                            <ul>
+                                <li>Advanced from residential to commercial accounts over 8 years before transitioning
+                                    into software engineering through self-directed study.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Projects</h2>
+
+                        <div class="resume-project">
+                            <div class="job-header">
+                                <h4>Santa's Lil' Helper</h4>
+                                <span class="job-date"><a href="https://github.com/nico-nunez/slh-v2"
+                                        target="_blank">github.com/nico-nunez/slh-v2</a></span>
+                            </div>
+                            <ul>
+                                <li>Built and deployed a full-stack gift exchange platform using React Router v7,
+                                    TypeScript, Node, PostgreSQL, and Drizzle ORM.</li>
+                                <li>Owned the application end to end, including data modeling, backend services,
+                                    validation, deployment, and automated testing.</li>
+                            </ul>
+                        </div>
+
+                        <div class="resume-project">
+                            <div class="job-header">
+                                <h4>Visceral</h4>
+                                <span class="job-date"><a href="https://github.com/nico-nunez/meh-groovebox-visceral"
+                                        target="_blank">github.com/nico-nunez/meh-groovebox-visceral</a></span>
+                            </div>
+                            <ul>
+                                <li>Building a standalone macOS groovebox in C++ with CoreAudio/CoreMIDI, Lua
+                                    scripting, MIDI input, preset management, and a reusable synth engine.</li>
+                                <li>Designed a code-driven performance workflow with shared transport, pattern-based
+                                    sequencing, live parameter control, and authored Lua documents.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Technical Skills</h2>
+                        <div class="resume-skills-grid">
+                            <div class="resume-skill-item">
+                                <span class="resume-skill-label">Languages:</span>
+                                <span class="resume-skill-value">TypeScript, JavaScript, Python, SQL, C++</span>
+                            </div>
+                            <div class="resume-skill-item">
+                                <span class="resume-skill-label">Frontend:</span>
+                                <span class="resume-skill-value">React, React Router v7, HTML, CSS, Tailwind,
+                                    TanStack Query, Redux, Zustand</span>
+                            </div>
+                            <div class="resume-skill-item">
+                                <span class="resume-skill-label">Backend:</span>
+                                <span class="resume-skill-value">Node.js, Django, REST API design, PostgreSQL,
+                                    Drizzle ORM</span>
+                            </div>
+                            <div class="resume-skill-item">
+                                <span class="resume-skill-label">Testing:</span>
+                                <span class="resume-skill-value">Playwright, Vitest, React Testing Library</span>
+                            </div>
+                            <div class="resume-skill-item">
+                                <span class="resume-skill-label">Tools &amp; Infrastructure:</span>
+                                <span class="resume-skill-value">Git, Docker, AWS, GCP, Vite, Jenkins</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Education</h2>
+                        <div class="resume-education">
+                            <strong>High School Diploma</strong>
+                        </div>
+                    </section>
+                </div>
             </div>
-          </header>
 
-          <section>
-            <h2>Summary</h2>
-            <p class="resume-summary">
-              Self-taught software engineer with a professional background in production web applications and a
-              growing focus on systems programming in C/C++. Personal projects explore what it means to write
-              performance-critical, real-time software close to the platform — deliberately avoiding high-level
-              audio frameworks in favor of working directly with macOS system APIs to build a deeper understanding
-              of how these systems actually work. Bring strong instincts for API design, library architecture,
-              and clean separation of concerns developed across both professional and personal work.
-            </p>
-          </section>
+            <!-- ── Systems resume ── -->
+            <div id="tab-systems" class="resume-doc" role="tabpanel" aria-labelledby="btn-systems" hidden>
+                <div class="container">
+                    <header>
+                        <h1>Nick Nunez</h1>
+                        <div class="contact-info">
+                            <span>Villa Park, IL</span>
+                            <span>•</span>
+                            <span><a href="mailto:nick.nunez.dev@gmail.com">nick.nunez.dev@gmail.com</a></span>
+                            <span>•</span>
+                            <span>630-649-0649</span>
+                            <span>•</span>
+                            <span><a href="https://nico-nunez.github.io" target="_blank">nico-nunez.github.io</a></span>
+                        </div>
+                    </header>
 
-          <section>
-            <h2>Projects</h2>
+                    <section>
+                        <h2>Summary</h2>
+                        <p class="resume-summary">
+                            Software engineer with 3 years of professional experience building production web
+                            applications and a growing focus on systems programming in C/C++. Currently building
+                            real-time audio projects for macOS using CoreAudio, CoreMIDI, Lua embedding, and custom
+                            C/C++ libraries, with an emphasis on API design, platform-level learning, and clean
+                            host/engine boundaries.
+                        </p>
+                    </section>
 
-            <div class="resume-project">
-              <div class="job-header">
-                <h4>Standalone Groovebox for macOS</h4>
-                <span class="job-date"><a href="https://github.com/nico-nunez/meh-groovebox-visceral" target="_blank">github.com/nico-nunez</a></span>
-              </div>
-              <ul>
-                <li>Standalone C/C++ performance instrument combining a shared clock, pattern-based step sequencer,
-                  and multi-track synthesis — built from scratch without audio framework abstractions</li>
-                <li>Integrated directly with CoreAudio and CoreMIDI (no JUCE or RtAudio) to understand the macOS
-                  audio platform at the system API level: audio device setup, buffer callbacks, MIDI event
-                  collection, and thread scheduling</li>
-                <li>Embedded a Lua runtime as a live REPL control surface, enabling real-time parameter changes,
-                  sequencer control, and performance scripting without recompiling</li>
-                <li>Step sequencer supports per-step parameter locks; multi-track architecture with internal
-                  mixing and shared clock synchronization across parts</li>
-                <li>Hosts the synth engine library; built-in code editor with language server support</li>
-              </ul>
-              <div class="resume-technologies">C/C++, CoreAudio, CoreMIDI, Lua, Make, macOS</div>
+                    <section>
+                        <h2>Projects</h2>
+
+                        <div class="resume-project">
+                            <div class="job-header">
+                                <h4>Standalone Groovebox for macOS</h4>
+                                <span class="job-date"><a href="https://github.com/nico-nunez/meh-groovebox-visceral"
+                                        target="_blank">github.com/nico-nunez/meh-groovebox-visceral</a></span>
+                            </div>
+                            <ul>
+                                <li>Building a standalone C/C++ performance instrument for macOS with shared transport,
+                                    pattern-based sequencing, multi-track synthesis, and internal mixing.</li>
+                                <li>Integrated directly with CoreAudio and CoreMIDI, handling audio device setup,
+                                    buffer callbacks, MIDI input, and real-time event scheduling without JUCE or
+                                    RtAudio.</li>
+                                <li>Embedded Lua as a live control surface for parameter changes, sequencer control,
+                                    performance scripting, and authored project documents.</li>
+                                <li>Hosts a reusable synth engine with per-step parameter locks, preset management, and
+                                    a built-in editor with language server support.</li>
+                            </ul>
+                        </div>
+
+                        <div class="resume-project">
+                            <div class="job-header">
+                                <h4>Embeddable C/C++ Synthesizer Library</h4>
+                                <span class="job-date"><a href="https://github.com/nico-nunez/meh-synth-engine"
+                                        target="_blank">github.com/nico-nunez/meh-synth-engine</a></span>
+                            </div>
+                            <ul>
+                                <li>Built a reusable C/C++ synth engine extracted from an earlier standalone synth app
+                                    and designed for embedding in multiple hosts.</li>
+                                <li>Implemented 64-voice polyphony with wavetable oscillators, envelopes, tempo-synced
+                                    LFOs, FM routing, effects, and a 16-slot modulation matrix.</li>
+                                <li>Designed the rendering path to separate audio-rate rendering from control-rate
+                                    updates, decoupling host buffer sizes from internal processing and avoiding
+                                    unnecessary work in the real-time hot path.</li>
+                                <li>Exposed an event-driven API for MIDI events, scalar parameter updates, higher-level
+                                    engine commands, and full-state preset serialization.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Experience</h2>
+
+                        <div class="job">
+                            <div class="job-header">
+                                <h3><span class="job-title">React Developer / Software Engineer</span> <span
+                                        class="job-company">|
+                                        Publicis Media</span></h3>
+                                <span class="job-date">September 2022 – November 2025</span>
+                            </div>
+                            <ul>
+                                <li>Led frontend development across multiple enterprise applications for internal teams
+                                    and external clients, growing from sole frontend developer into a technical
+                                    leadership role.</li>
+                                <li>Built production React/TypeScript applications for analytics and campaign
+                                    management workflows, including dashboards handling 10–50K records per session.</li>
+                                <li>Established shared component patterns, reviewed code, mentored developers, and
+                                    supported hiring for junior and mid-level frontend roles.</li>
+                                <li>Collaborated with Java/Spring Boot and Django/Python backend systems by designing
+                                    API contracts, integrating data pipelines, and diagnosing cross-service issues.</li>
+                            </ul>
+                        </div>
+
+                        <div class="job">
+                            <div class="job-header">
+                                <h3><span class="job-title">Lawn Care Technician</span> <span class="job-company">|
+                                        TruGreen</span></h3>
+                                <span class="job-date">2013 – 2021</span>
+                            </div>
+                            <ul>
+                                <li>Advanced from residential to commercial accounts over 8 years before transitioning
+                                    into software engineering through self-directed study.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Technical Skills</h2>
+                        <div class="resume-skills-grid">
+                            <div class="resume-skill-item">
+                                <span class="resume-skill-label">Systems:</span>
+                                <span class="resume-skill-value">C/C++ (C++17), real-time programming, static
+                                    libraries, Make</span>
+                            </div>
+                            <div class="resume-skill-item">
+                                <span class="resume-skill-label">Audio / Platform APIs:</span>
+                                <span class="resume-skill-value">CoreAudio, CoreMIDI, macOS system frameworks</span>
+                            </div>
+                            <div class="resume-skill-item">
+                                <span class="resume-skill-label">Scripting / Embedding:</span>
+                                <span class="resume-skill-value">Lua, shell scripting</span>
+                            </div>
+                            <div class="resume-skill-item">
+                                <span class="resume-skill-label">Web / Professional:</span>
+                                <span class="resume-skill-value">TypeScript, React, Python, Django, Node.js,
+                                    PostgreSQL</span>
+                            </div>
+                            <div class="resume-skill-item">
+                                <span class="resume-skill-label">Tools &amp; Infrastructure:</span>
+                                <span class="resume-skill-value">Git, Docker, AWS, GCP, Vite, Jenkins</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Education</h2>
+                        <div class="resume-education">
+                            <strong>High School Diploma</strong>
+                        </div>
+                    </section>
+                </div>
             </div>
 
-            <div class="resume-project">
-              <div class="job-header">
-                <h4>Embeddable C/C++ Synthesizer Library</h4>
-                <span class="job-date"><a href="https://github.com/nico-nunez/meh-synth-engine" target="_blank">github.com/nico-nunez</a></span>
-              </div>
-              <ul>
-                <li>Standalone C/C++ library extracted from the groovebox application — builds as a static lib and
-                  can be embedded into other projects via <code>engine.mk</code>; designed with a clean
-                  host/engine boundary so the engine owns synthesis state and the host owns platform concerns</li>
-                <li>Implements 4 wavetable oscillators per voice, 64-voice polyphony, 3 envelope generators,
-                  3 LFOs with tempo-sync and fade-in, and a 16-slot modulation matrix with sources including
-                  envelopes, LFOs, velocity, mod wheel, and key tracking</li>
-                <li>Renders in internal 64-sample chunks regardless of host buffer size, providing a cheap
-                  control-rate lane; parameters use a dirty-sync model to defer coefficient recalculation
-                  rather than recomputing on every write</li>
-                <li>Preset system captures full engine state — scalar params, FM routing, modulation matrix,
-                  signal and FX chain ordering — with JSON serialization for persistence</li>
-                <li>Event-driven API surfaces three input channels: MIDI events, scalar parameter updates,
-                  and higher-level engine commands</li>
-              </ul>
-              <div class="resume-technologies">C++17, Make, static library, JSON</div>
-            </div>
-          </section>
+        </div><!-- /.resume-doc-wrapper -->
 
-          <section>
-            <h2>Experience</h2>
+    </main>
 
-            <div class="job">
-              <div class="job-header">
-                <h3><span class="job-title">Software Engineer</span> <span class="job-company">| Publicis Media</span></h3>
-                <span class="job-date">September 2022 – November 2025</span>
-              </div>
-              <ul>
-                <li>Progressed from individual contributor to technical lead in under 3 years; owned hiring of
-                  junior and mid-level developers, conducted code reviews, and established engineering best
-                  practices across the team</li>
-                <li>Built and maintained production TypeScript/React applications processing 10–50K records per
-                  session — designed component architecture, optimized performance through parallel requests and
-                  client-side caching, and wrote test coverage with Vitest and React Testing Library</li>
-                <li>Contributed to Django/Python backend services — designed API contracts, identified and
-                  diagnosed issues across a large Django codebase, and collaborated directly with the data
-                  engineering team on pipeline integration</li>
-                <li>Reverse-engineered undocumented Java/Spring Boot APIs from source to unblock frontend
-                  integration; identified and led the replacement of insecure API access patterns with JWT
-                  authentication</li>
-              </ul>
-            </div>
+    <web-footer></web-footer>
 
-            <div class="job">
-              <div class="job-header">
-                <h3><span class="job-title">Lawn Care Technician</span> <span class="job-company">| TruGreen</span></h3>
-                <span class="job-date">2013 – 2021</span>
-              </div>
-              <ul>
-                <li>Advanced from residential to commercial accounts over 8 years; transitioned into software
-                  engineering through self-directed study</li>
-              </ul>
-            </div>
-          </section>
+    <script>
+        const tabs = document.querySelectorAll('.resume-tab');
+        const panels = document.querySelectorAll('.resume-doc');
+        const downloadBtn = document.getElementById('resume-download');
 
-          <section>
-            <h2>Technical Skills</h2>
-            <div class="resume-skills-grid">
-              <div class="resume-skill-item">
-                <span class="resume-skill-label">Systems:</span>
-                <span class="resume-skill-value">C/C++ (C++17), Make, static libraries, real-time programming</span>
-              </div>
-              <div class="resume-skill-item">
-                <span class="resume-skill-label">Platform APIs:</span>
-                <span class="resume-skill-value">CoreAudio, CoreMIDI, macOS system frameworks</span>
-              </div>
-              <div class="resume-skill-item">
-                <span class="resume-skill-label">Scripting / Embedding:</span>
-                <span class="resume-skill-value">Lua (embedded runtime), shell scripting</span>
-              </div>
-              <div class="resume-skill-item">
-                <span class="resume-skill-label">Web / Professional:</span>
-                <span class="resume-skill-value">TypeScript, React, Python, Django, Node.js</span>
-              </div>
-              <div class="resume-skill-item">
-                <span class="resume-skill-label">Database:</span>
-                <span class="resume-skill-value">PostgreSQL, Drizzle ORM, SQL</span>
-              </div>
-              <div class="resume-skill-item">
-                <span class="resume-skill-label">Testing:</span>
-                <span class="resume-skill-value">Vitest, Playwright, React Testing Library</span>
-              </div>
-              <div class="resume-skill-item">
-                <span class="resume-skill-label">Cloud &amp; Infra:</span>
-                <span class="resume-skill-value">AWS (EC2, S3), GCP, Docker</span>
-              </div>
-              <div class="resume-skill-item">
-                <span class="resume-skill-label">Tools:</span>
-                <span class="resume-skill-value">Git, Vite, Docker Compose, Jenkins</span>
-              </div>
-            </div>
-          </section>
+        const resumeFiles = {
+            fullstack: {
+                href: 'assets/resumes/nick_nunez_fullstack_resume.pdf',
+                download: 'Nick_Nunez_Resume_Fullstack.pdf'
+            },
+            systems: {
+                href: 'assets/resumes/nick_nunez_systems_resume.pdf',
+                download: 'Nick_Nunez_Resume_Systems.pdf'
+            }
+        };
 
-          <section>
-            <h2>Education</h2>
-            <div class="resume-education">
-              <strong>High School Diploma</strong>
-            </div>
-          </section>
-        </div>
-      </div>
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.dataset.tab;
 
-    </div><!-- /.resume-doc-wrapper -->
+                tabs.forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
 
-  </main>
+                panels.forEach(p => {p.hidden = p.id !== `tab-${target}`;});
 
-  <web-footer></web-footer>
-
-  <script>
-    const tabs = document.querySelectorAll('.resume-tab');
-    const panels = document.querySelectorAll('.resume-doc');
-    const downloadBtn = document.getElementById('resume-download');
-
-    const resumeFiles = {
-      fullstack: {
-        href: 'assets/resumes/Nick%20Nunez%20-%20Software%20Engineer%20(full%20stack).pdf',
-        download: 'Nick_Nunez_Resume_Fullstack.pdf'
-      },
-      systems: {
-        href: 'assets/resumes/Nick%20Nunez%20-%20Software%20Engineer%20(systems).pdf',
-        download: 'Nick_Nunez_Resume_Systems.pdf'
-      }
-    };
-
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const target = tab.dataset.tab;
-
-        tabs.forEach(t => {
-          t.classList.remove('active');
-          t.setAttribute('aria-selected', 'false');
+                downloadBtn.href = resumeFiles[target].href;
+                downloadBtn.download = resumeFiles[target].download;
+            });
         });
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected', 'true');
-
-        panels.forEach(p => { p.hidden = p.id !== `tab-${target}`; });
-
-        downloadBtn.href = resumeFiles[target].href;
-        downloadBtn.download = resumeFiles[target].download;
-      });
-    });
-  </script>
+    </script>
 
 </body>
 

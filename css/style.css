@@ -573,6 +573,7 @@ body::after {
 
 .card-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.25rem;
   padding-top: 0.75rem;
   border-top: 1px solid var(--border);
